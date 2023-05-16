@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FrontLandingController;
+use App\Http\Controllers\CrudGeneratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,6 @@ Route::post('/userupdate/{id}', [UserController::class, 'update'])->name('userup
 
 Route::get('/frontlanding', [FrontLandingController::class, 'index'])->name('frontlanding');
 Route::get('/', [FrontLandingController::class, 'index']);
+
+Route::get('/crud', [CrudGeneratorController::class, 'index']);
+Route::post('/crud', [CrudGeneratorController::class, 'index']);
